@@ -1,6 +1,6 @@
 
-public class Student extends Person {
-     private int m1,m2,m3;
+abstract public class Student extends Person {
+     protected int m1,m2,m3;
      public Student() {
     	 System.out.println("in student class default constructor");
      }
@@ -13,11 +13,12 @@ public class Student extends Person {
     	 this.m2=m2;
     	 this.m3=m3;
      }
-     public int m1() {
+    protected int m1() {
     	 System.out.println("in student m1");
     	 return 20;
      }
-     public String toString() {
+    public abstract int calculateGrade();
+    public String toString() {
     	 return super.toString()+"M1 : "+m1+" m2: "+m2+" M3 : "+m3;
      }
 }
